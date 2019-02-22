@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block body %}
+    <section class="section">
+        <div class="container is-desktop">
+
+            {% if message %}
+                <div>{{ message }}</div>
+            {% endif %}
+            {% if results %}
+                <table class="table is-striped is-fullwidth">
+                    <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Year</th>
+                        <th>ISBN</th>
+                    </tr>
+                    </thead>
+                    {% for book in results %}
+                        <tr>
+                            <td><a href="{{ url_for('book', book_id=book.id) }}" title="{{ book.title }}">{{ book.title }}</a></td>
+                            <td>{{ book.author }}</td>
+                            <td>{{ book.year }}</td>
+                            <td>{{ book.isbn }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% else %}
+                No results.
+            {% endif %}
+            {% if pages > 1 %}
+            <h1>helo searcher</h1>
+                <nav class="pagination is-centered">
+                    <a class="pagination-previous" {% if page==1 %}disabled
+                       {% else %}href="{{ url_for('search', q=query, page=page - 1) }} "{% endif %}>Previous</a>
+                    <a class="pagination-next" {% if page==pages %}disabled
+                       {% else %}href="{{ url_for('search', q=query, page=page + 1) }} "{% endif %}>Next page</a>
+                </nav>
+            {% endif %}
+        </div>
+    </section>
+    
+{% endblock %}

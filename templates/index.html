@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %}
+    <section class="hero">
+        <div class="hero-body">
+            <h1 class="title">
+                Search books in our database
+            </h1>
+            <p class="subtitle">
+                Type title, author or ISBN number
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="content columns is-centered">
+            <div class="column is-half">
+                <div class="box">
+                    <form class="field has-addons" method="GET" action="/search">
+                        <div class="control is-expanded">
+                            <input id="search_input" name="q" class="input" type="text" placeholder="Find a book"
+                                   list="ac">
+                            <datalist id="ac">
+                            </datalist>
+                        </div>
+                        <div class="control">
+                            <button id="search_button" class="button is-info">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+{% endblock %}

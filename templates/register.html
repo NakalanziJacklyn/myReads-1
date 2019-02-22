@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block body %}
+    <section class="section">
+        <div class="container is-desktop">
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="box1">
+                        <h1 class="title">Register here.</h1>
+                        <form action="/register" method="post" class="field">
+                            <div class="field">
+                                <input type="username" name="username" required="" placeholder="Enter your username">
+                                <!-- <label for="password">Password</label> -->
+                            </div>
+                            <div class="field">
+                                <input type="password" name="password" required="" placeholder="Enter your password">
+                                <!-- <label for="password">Password</label> -->
+                            </div>
+
+                            <div class="field">
+                                <input type="Retype-password" name="Retype-password" required="" placeholder="Retype-password your password">
+                                <!-- <label for="password">Password</label> -->
+                            </div>
+
+                            <div class="field is-grouped">
+                                <div class="control">
+                                    <a href="{{ url_for('login') }}" class="button">Submit</a>
+                                </div>
+                                <div class="control">
+                                    <a href="{{ url_for('login') }}" class="button">login instead</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,104 @@
+.box{
+  color:#fff;
+  font-size:60px;
+  background: rgba(0,0,0,.5)
+}
+
+.title{
+  text-align: center;
+}
+
+.subtitle1{
+  text-align:center; 
+}
+
+#hero{
+background-color: 00d1b2;
+}
+
+p,a{
+  text-decoration: none;
+  display: flex;
+ 
+}
+.control{
+  float: right;
+  padding: 10px;
+}
+.navbar{
+  height: 50px;
+  background-color:#00d1b2;
+}
+
+.box1{
+  position: absolute;
+  top: 600%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  padding: 40px;
+  background: rgba(0,0,0,.3);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.5);
+  border-radius: 10px;
+ 
+}
+
+.box1 h1{
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+.box1 .field{
+  position: relative;
+}
+.box1 .field input{
+  width: 300px;
+  padding: 30 0px;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.keep{
+  margin: 0;
+  padding: 0;
+}
+
+
+ .box1 .field label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: -50px 0;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  pointer-events: none;
+  transition: .5s;
+} 
+.box1 .field input:focus ~ label
+.box1 .field input:valid ~ label{
+  top: -30px;
+  left: 0;
+  color:#00d1b2;
+  font-size: 12px;
+
+}
+.button{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #00d1b2;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+} 
+
+/* .box1 input[type="text"], input[type="password"] */
